@@ -1,11 +1,15 @@
-# Responsive HTML Table With Pure CSS - Web Design UI Design
+# Grad Admissions - For MS CS and PhD CS 
 ![HTML Table UI Design](images/screenshot.png)
-Without using CSS frameworks we'll build **Responsive HTML Table**. So, with pure CSS I'll show you how to create **Glassmorphism Responsive HTML Table**. Let's take UI design to next level.
 
-Code written by:
-👨🏻‍⚕️ Coding Design (Jeet Saru)
+## Features of the website
+1. You can search admits of colleges, and get a good idea of where your profile stands
+2. The dataset is very large including admits from as early as 2007
+3. The dataset is for MS in CS and for PhD in CS only
+4. It has results from colleges from all around the world
 
-> You can do whatever you want with the code. However if you love my content, 
-> you can **SUBSCRIBED** my YouTube Channel.
-
-🌎link: www.youtube.com/codingdesign 
+## How the website was created?
+1. The data used in the website is scraped from the internet, using python libraries like **BeautifulSoup** and **requests**
+2. The website was made using **HTML**, **CSS** and **Javascript**
+3. I used **d3.js** for extracting the search results from the **csv** file
+4. All of this is rendered on the **front-end**
+   

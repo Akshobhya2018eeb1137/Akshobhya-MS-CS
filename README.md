@@ -12,4 +12,7 @@
 2. The website was made using **HTML**, **CSS** and **Javascript**
 3. I used **d3.js** for extracting the search results from the **csv** file
 4. All of this is rendered on the **front-end**
+
+
+The Website is live at: https://akshobhya62.github.io/CollegeFinder/
    

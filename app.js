@@ -39,16 +39,27 @@ return a;
   // form.on("submit", runEnter);
 
   function runEnter() {
+    document.getElementById("lesslen").innerText = ""
     d3.select("tbody").html("")
     d3.selectAll("p").classed('noresults', true).html("")
     // d3.event.preventDefault();
     var inputElement = d3.select("#user-input");
     var inputValue = inputElement.property("value").toLowerCase().trim();
+    console.log("input = ")
+    console.log(inputValue)
+    console.log(inputValue.length)
+    if(inputValue.length < 6){
+      console.log("came inside")
+      // d3.select("tbody").html('<h3 style="color: red;"> <p>NOTE: Please try using more than 5 characters to avoid too many results!</p></h3>')
+        document.getElementById("lesslen").innerText = 'Please try using more than 5 characters to avoid too many results!'
+        return
+    }
 
     if (inputValue.length < 6){
       d3.select("p").classed('noresults2', true).html("<center><strong>Please try using more than 5 characters to avoid too many results!</strong>")
       inputValue = "Something to give no results"
     }
+
     var filteredData = movies.filter(movies => movies.College.toLowerCase().trim().includes(inputValue));
     // console.log(filteredData.length)
     if (filteredData.length === 0 && inputValue !== "Something to give no results"){
@@ -57,6 +68,8 @@ return a;
  
     output = _.sortBy(filteredData, 'Year').reverse()
     console.log(filteredData)
+    
+    if(filteredData.length == 0)document.getElementById("lesslen").innerText ='Sorry we found no results. Please check if your spelling is correct!'
   
     for (var i = 0; i < min(filteredData.length, 1000); i++) {
       // console.log(output[i]['original_title'])
